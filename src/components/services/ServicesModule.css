@@ -1,0 +1,150 @@
+.services-container {
+    width: 100%;
+}
+
+.services-header {
+    margin-bottom: 24px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 12px;
+}
+
+.services-header h2 {
+    margin: 0 0 6px 0;
+    color: #1e293b;
+    font-size: 1.8rem;
+}
+
+.services-header p {
+    margin: 0;
+    color: #64748b;
+    font-size: 1rem;
+}
+
+.service-card {
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    margin-bottom: 24px;
+    border: 1px solid #e2e8f0;
+    width: 100%;
+}
+
+.service-card h3 {
+    margin: 0 0 20px 0;
+    font-size: 1.25rem;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+.error-message {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.service-form {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    gap: 16px;
+    align-items: end;
+}
+
+@media (max-width: 900px) {
+    .service-form {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #475569;
+}
+
+.form-group input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    outline: none;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.form-group input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.submit-btn {
+    padding: 12px 24px;
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    height: 46px;
+}
+
+.submit-btn:hover {
+    background: #1d4ed8;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.service-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.service-table th {
+    padding: 14px 16px;
+    color: #475569;
+    font-size: 0.875rem;
+    font-weight: 600;
+    background: #f8fafc;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.service-table td {
+    padding: 16px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.service-table tr:hover {
+    background: #f8fafc;
+}
+
+.duration-badge {
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    color: #64748b;
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 1px dashed #cbd5e1;
+}
