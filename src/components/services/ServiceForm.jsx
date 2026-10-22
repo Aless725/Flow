@@ -41,6 +41,13 @@ export default function ServiceForm({ onAddService }) {
         setDuration('');
     };
 
+    const handleNumberChange = (setValue) => (e) => {
+        const val = e.target.value;
+        if (val === '' || parseFloat(val) >= 0) {
+            setValue(val);
+        }
+    };
+
     return (
         <div className="service-card">
             <h3>Registrar Nuevo Servicio</h3>
@@ -62,8 +69,10 @@ export default function ServiceForm({ onAddService }) {
                     <label>Precio (S/.)</label>
                     <input
                         type="number"
+                        step="0.01"
+                        min="0.01"
                         value={price}
-                        onChange={(e) => setPrice(e.target.value)}
+                        onChange={handleNumberChange(setPrice)}
                         placeholder="Ej. S/. 100"
                     />
                 </div>
@@ -72,8 +81,9 @@ export default function ServiceForm({ onAddService }) {
                     <label>Duración (min)</label>
                     <input
                         type="number"
+                        min="1"
                         value={duration}
-                        onChange={(e) => setDuration(e.target.value)}
+                        onChange={handleNumberChange(setDuration)}
                         placeholder="Ej. 45 min."
                     />
                 </div>
