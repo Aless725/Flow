@@ -5,7 +5,7 @@ Este módulo permite la administración completa del catálogo de servicios dent
 
 ## Funcionalidades Implementadas
 1. **Registro de Servicios:** Permite dar de alta nuevos servicios especificando nombre, precio y duración.
-2. **Consulta de Catálogo:** Visualización estructurada en tabla de todos los servicios disponibles[cite: 1].
+2. **Consulta de Catálogo:** Visualización estructurada en tabla de todos los servicios disponibles.
 3. **Validaciones de Negocio:** 
    - Campos obligatorios completos.
    - Restricción de precios y duraciones mayores estricts a 0 min.
