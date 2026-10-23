@@ -5,12 +5,16 @@
 }
 
 /* El contenido va a la derecha del sidebar en PC */
-.app-content-wrapper {
+.app-content-wrapper { 
   flex: 1;
   display: flex;
   flex-direction: column;
-  margin-left: 260px; /* Ancho del sidebar */
+  margin-left: 260px;
   min-height: 100vh;
+  transition: margin-left 0.3s ease; }
+
+.app-content-wrapper.collapsed {
+  margin-left: 90px;
 }
 
 .app-main {

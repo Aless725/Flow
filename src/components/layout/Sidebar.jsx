@@ -1,11 +1,20 @@
 import './Sidebar.css'
 
-function Sidebar({ activeTab, setActiveTab }) {
+function Sidebar({ activeTab, setActiveTab, collapsed, setCollapsed, }) {
+
   return (
-    <aside className="flow-sidebar">
+    <aside className={`flow-sidebar ${collapsed ? 'collapsed' : ''}`}>
       <div className="sidebar-brand">
         <img className="flow-logo" src="/flow.png" alt="Flow Logo" />
-        <h1>Flow</h1>
+
+        {!collapsed && <h1>Flow</h1>}
+
+        <button
+          className="sidebar-toggle"
+          onClick={() => setCollapsed(!collapsed)}
+        >
+          ☰
+        </button>
       </div>
 
       <nav className="sidebar-nav">
@@ -14,7 +23,7 @@ function Sidebar({ activeTab, setActiveTab }) {
           onClick={() => setActiveTab('clients')}
         >
           <span className="material-symbols-outlined">group</span>
-          Clientes
+          {!collapsed && <span className="nav-text">Clientes</span>}
         </button>
 
         <button
@@ -22,7 +31,7 @@ function Sidebar({ activeTab, setActiveTab }) {
           onClick={() => setActiveTab('services')}
         >
           <span className="material-symbols-outlined">handyman</span>
-          Servicios
+          {!collapsed && <span className="nav-text">Servicios</span>}
         </button>
 
         <button
@@ -30,7 +39,7 @@ function Sidebar({ activeTab, setActiveTab }) {
           onClick={() => setActiveTab('reservations')}
         >
           <span className="material-symbols-outlined">calendar_month</span>
-          Reservas
+          {!collapsed && <span className="nav-text">Reservas</span>}
         </button>
       </nav>
     </aside>

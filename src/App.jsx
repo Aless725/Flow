@@ -9,14 +9,15 @@ import ListaReservas from './features/reservations/ListaReservas'
 import './styles/App.css'
 
 function App() {
-  const [activeTab, setActiveTab] = useState('clients')
+const [activeTab, setActiveTab] = useState('clients')
+const [collapsed, setCollapsed] = useState(false)
 
   return (
     <ReservasProvider>
       <div className="app-container">
-        <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
+        <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} collapsed={collapsed} setCollapsed={setCollapsed} />
         
-        <div className="app-content-wrapper">
+        <div className={`app-content-wrapper ${collapsed ? 'collapsed' : ''}`}>
           <main className="app-main">
             {activeTab === 'clients' && <GestionClientes />}
             {activeTab === 'services' && <ServicesModule />}

@@ -61,7 +61,8 @@
 /* Ajuste para que los iconos de Google se vean bien */
 .sidebar-btn .material-symbols-outlined {
   font-size: 20px;
-  color: #9ca3af; /* Gris por defecto */
+  color: #9ca3af;
+  /* Gris por defecto */
   transition: color 0.15s ease;
 }
 
@@ -82,7 +83,8 @@
 
 .sidebar-btn.active .material-symbols-outlined {
   color: var(--flow-purple);
-  font-variation-settings: 'FILL' 1; /* Rellena el icono cuando está activo */
+  font-variation-settings: 'FILL' 1;
+  /* Rellena el icono cuando está activo */
 }
 
 /* Responsive: En móviles, la barra se vuelve horizontal arriba */
@@ -112,4 +114,34 @@
   .sidebar-btn {
     padding: 8px 12px;
   }
+}
+
+.flow-sidebar {
+  width: 280px;
+  transition: width 0.3s ease;
+}
+
+.flow-sidebar.collapsed {
+  width: 90px;
+}
+
+.sidebar-toggle {
+  margin-left: auto;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  color: #6b7280;
+}
+
+.flow-sidebar.collapsed .sidebar-btn {
+  justify-content: center;
+}
+
+.flow-sidebar.collapsed .nav-text {
+  display: none;
+}
+
+.flow-sidebar.collapsed .sidebar-brand {
+  justify-content: center;
 }
