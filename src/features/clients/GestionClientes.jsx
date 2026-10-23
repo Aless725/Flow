@@ -81,9 +81,19 @@ function GestionClientes() {
       return
     }
 
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo)) {
-      mostrarMensaje('Ingresa un correo electrónico válido.')
-      return
+    if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|net|org|pe|edu|gob|co|info)$/.test(correo)) {
+      mostrarMensaje('Ingresa un correo electrónico válida (ejem: .com, .pe).')
+     return
+    }
+
+    if (/@gm[a-z]l?\.com$/.test(correo) && !correo.endsWith('@gmail.com')) {
+      mostrarMensaje('Correo inválido, te comiste una letra. Ejem: @gmail.com');
+      return;
+    }
+
+    if (correo.includes('@outloo.com') || correo.includes('@hotmai.com')) {
+      mostrarMensaje('  Correo inválido, te comiste una letra. Ejem: @outlook.com o @hotmail.com');
+      return;
     }
 
     const correoDuplicado = clientes.some(
