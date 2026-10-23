@@ -1,127 +1,6 @@
-body {
-  background-color: #f4f6f8;
-  margin: 0;
-  padding: 0;
-}
-
-.contenedor-principal {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.titulo-principal {
-  text-align: center;
-  color: #333;
-  margin-bottom: 30px;
-  font-size: 28px;
-}
-
-.formulario-container {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid #e0e0e0;
-  margin-bottom: 30px;
-}
-
-.formulario-container h3 {
-  margin-top: 0;
-  color: #444;
-  text-align: center;
-}
-
-.formulario-container form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-.formulario-container input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 16px;
-}
-
-.formulario-container button {
-  padding: 12px;
-  background-color: #86d9c7;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.formulario-container button:hover {
-  background-color: hwb(211 63% 6%);
-}
-
-
-.tabla-container h3 {
-  color: #444;
-  margin-bottom: 15px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: white;
-}
-
-th, td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-th {
-  background-color: #f4f6f8;
-  font-weight: 600;
-  color: #333;
-}
-
-tr:hover {
-  background-color: #f9f9f9;
-}
-
-.btn-cancelar {
-  background-color: #dc3545;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.btn-cancelar:hover {
-  background-color: #c82333;
-}
-
-.estado-confirmada {
-  color: #28a745;
-  font-weight: bold;
-}
-
-.estado-cancelada {
-  color: #dc3545;
-  font-weight: bold;
-
-.app-container {
-
 :root {
   font-family: Inter, "Segoe UI", Arial, sans-serif;
   color: #261747;
-  background: #3925a8;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -167,6 +46,7 @@ button {
   min-height: 100vh;
 }
 
+/* CONTENEDOR CON LOS DEGRADADOS ORIGINALES */
 .app-container {
   position: relative;
   isolation: isolate;
@@ -184,6 +64,7 @@ button {
     linear-gradient(135deg, #5420b8 0%, #3925a8 35%, #154bb8 68%, #087eae 100%);
 }
 
+/* HEADER ORIGINAL */
 .app-header {
   position: relative;
   z-index: 2;
@@ -262,6 +143,7 @@ button {
   box-shadow: 0 5px 13px rgb(81 70 216 / 24%);
 }
 
+/* CUERPO PRINCIPAL */
 .app-main {
   width: 100%;
   padding: 30px 5%;
@@ -269,16 +151,7 @@ button {
   min-width: 0;
 }
 
-.placeholder-module {
-  width: 100%;
-  padding: 60px;
-  border-radius: 12px;
-  text-align: center;
-  background: #fff;
-  box-shadow: 0 4px 6px rgb(0 0 0 / 5%);
-  border: 1px solid #e5e7eb;
-}
-
+/* FOOTER ORIGINAL */
 .flow-footer {
   padding: 25px 16px;
   color: #fff;
@@ -291,6 +164,7 @@ button {
   background: rgb(30 15 105 / 15%);
 }
 
+/* RESPONSIVE */
 @media (max-width: 650px) {
   .app-header {
     padding: 16px 18px;
@@ -311,10 +185,6 @@ button {
 
   .app-main {
     padding: 20px 14px;
-  }
-
-  .placeholder-module {
-    padding: 30px 18px;
   }
 }
 

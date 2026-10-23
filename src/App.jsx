@@ -47,13 +47,14 @@ function App() {
 
         <main className="app-main">
           {activeTab === 'clients' && <GestionClientes />}
+          
           {activeTab === 'services' && <ServicesModule />}
+          
           {activeTab === 'reservations' && (
-            <div className="placeholder-module">
-              <h2>Módulo de Reservas</h2>
+            <>
               <FormularioReserva />
               <ListaReservas />
-            </div>
+            </>
           )}
         </main>
 
