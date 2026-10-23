@@ -1,0 +1,115 @@
+.flow-sidebar {
+  width: 260px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--flow-bg);
+  border-right: 1px solid var(--flow-border);
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  z-index: 100;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 12px;
+  margin-bottom: 32px;
+}
+
+.flow-logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.sidebar-brand h1 {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin: 0;
+  color: var(--flow-text-main);
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebar-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 12px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: var(--flow-text-muted);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-align: left;
+}
+
+/* Ajuste para que los iconos de Google se vean bien */
+.sidebar-btn .material-symbols-outlined {
+  font-size: 20px;
+  color: #9ca3af; /* Gris por defecto */
+  transition: color 0.15s ease;
+}
+
+.sidebar-btn:hover {
+  background-color: var(--flow-surface);
+  color: var(--flow-text-main);
+}
+
+.sidebar-btn:hover .material-symbols-outlined {
+  color: var(--flow-text-main);
+}
+
+/* Estado Activo (Morado estilo Notion) */
+.sidebar-btn.active {
+  background-color: var(--flow-purple-soft);
+  color: var(--flow-purple);
+}
+
+.sidebar-btn.active .material-symbols-outlined {
+  color: var(--flow-purple);
+  font-variation-settings: 'FILL' 1; /* Rellena el icono cuando está activo */
+}
+
+/* Responsive: En móviles, la barra se vuelve horizontal arriba */
+@media (max-width: 768px) {
+  .flow-sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border-right: none;
+    border-bottom: 1px solid var(--flow-border);
+  }
+
+  .sidebar-brand {
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    gap: 4px;
+  }
+
+  .sidebar-btn {
+    padding: 8px 12px;
+  }
+}

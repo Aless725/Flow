@@ -4,7 +4,9 @@ function Header({ activeTab, setActiveTab }) {
   return (
     <header className="flow-header">
       <div className="flow-header-brand">
-        <img className="flow-logo" src="/flow.png" alt="Flow Logo" />
+        <div className="flow-logo-container">
+          <img className="flow-logo" src="/flow.png" alt="Flow Logo" />
+        </div>
         <div className="flow-brand-text">
           <h1>Flow</h1>
           <span>Panel Principal</span>

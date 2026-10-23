@@ -171,9 +171,17 @@ button {
   position: relative;
   isolation: isolate;
   display: flex;
-  flex-direction: column;
   min-height: 100vh;
   background-color: var(--flow-bg);
+}
+
+/* El contenido va a la derecha del sidebar en PC */
+.app-content-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 260px; /* Ancho del sidebar */
+  min-height: 100vh;
 }
 
 .app-main {
@@ -184,11 +192,15 @@ button {
   padding: 48px 24px;
 }
 
-/* Placeholder para secciones aún no construidas */
-.placeholder-module {
-  padding: 60px;
-  text-align: center;
-  background: var(--flow-surface);
-  border: 1px solid var(--flow-border);
-  border-radius: 12px;
+/* En móviles, el sidebar pasa arriba, así que quitamos el margen */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+  .app-content-wrapper {
+    margin-left: 0;
+  }
+  .app-main {
+    padding: 24px 16px;
+  }
 }
