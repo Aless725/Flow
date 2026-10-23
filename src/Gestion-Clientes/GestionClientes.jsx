@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react'
 import './GestionClientes.css'
 
@@ -147,18 +146,15 @@ function GestionClientes() {
   const termino = busqueda.trim().toLowerCase()
 
   const clientesFiltrados = clientes.filter((cliente) =>
-    [
-      cliente.nombre,
-      cliente.telefono,
-      cliente.correo,
-    ].some((dato) => dato.toLowerCase().includes(termino)),
+    [cliente.nombre, cliente.telefono, cliente.correo].some((dato) =>
+      dato.toLowerCase().includes(termino),
+    ),
   )
 
   return (
     <main className="gestion-clientes">
       <header className="gc-encabezado">
         <div className="gc-encabezado-contenido">
-        
           <h1>Gestión de clientes</h1>
 
           <p>
@@ -171,7 +167,6 @@ function GestionClientes() {
 
       <section className="gc-panel">
         <div className="gc-panel-titulo gc-titulo-centrado">
-
           <h2>
             {clienteEditando !== null
               ? 'Modificar cliente'
