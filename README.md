@@ -21,6 +21,8 @@ src/
 ├── styles/              # Estilos globales y variables de diseño (Design Tokens)
 ├── App.jsx              # Enrutador principal por estados (Tabs)
 └── main.jsx             # Punto de entrada de React
+```
+
 Identidad Visual (Flow 1.0)
 La interfaz gráfica fue rediseñada bajo los siguientes lineamientos:
 
@@ -33,6 +35,7 @@ Estilo: Inspirado en herramientas de productividad modernas (estilo Notion/Super
 Módulos del Sistema
 1. Módulo de Gestión de Clientes
 Descripción
+
 Permite administrar la información de los clientes dentro de la aplicación web, facilitando su registro, consulta, edición y búsqueda.
 
 Funcionalidades Implementadas
@@ -65,6 +68,7 @@ src/features/clients/GestionClientes.css: Estilos visuales del módulo.
 
 2. Módulo de Servicios
 Descripción
+
 Permite la administración completa del catálogo de servicios ofrecidos dentro de la aplicación web.
 
 Funcionalidades Implementadas
@@ -91,6 +95,7 @@ src/features/services/ServiceList.jsx: Tabla interactiva para la consulta de reg
 
 3. Módulo de Reservas
 Descripción
+
 Permite el agendamiento de citas, vinculando los clientes y servicios previamente registrados en el sistema.
 
 Funcionalidades Implementadas
@@ -115,28 +120,4 @@ src/features/reservations/ListaReservas.jsx: Tabla de visualización y cancelaci
 
 src/features/reservations/Reservas.css: Estilos visuales del módulo.
 
-Requisitos de Ejecución
-Para iniciar el proyecto en un entorno local, ejecute los siguientes comandos:
 
-bash
-# Instalar dependencias
-npm install
-
-# Iniciar el servidor de desarrollo
-npm run dev
-text
-
-### Pasos finales:
-1. Abre tu archivo `README.md` en VS Code, borra lo que tiene actualmente y pega el bloque de arriba.
-2. Guarda el archivo.
-3. Abre la terminal y haz el commit con el mensaje que acordamos:
-
-```powershell
-git add README.md
-git commit -m "docs(readme): actualizar documentación general del proyecto v1.0.1
-
-- Se documenta la nueva arquitectura Feature-Sliced.
-- Se añade la sección de identidad visual (Flow 1.0).
-- Se detalla el funcionamiento y componentes del nuevo módulo de Reservas.
-- Se corrigen errores tipográficos en el módulo de servicios y se estandarizan las rutas."
-git push origin main
