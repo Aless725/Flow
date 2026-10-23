@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { ReservasProvider } from './features/reservations/ReservasContext'
-import Header from './components/layout/Header'
+import Sidebar from './components/layout/Sidebar' // <-- Nuevo componente
 import Footer from './components/layout/Footer'
 import GestionClientes from './features/clients/GestionClientes'
 import ServicesModule from './features/services/ServicesModule'
@@ -14,20 +14,21 @@ function App() {
   return (
     <ReservasProvider>
       <div className="app-container">
-        <Header activeTab={activeTab} setActiveTab={setActiveTab} />
+        <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
         
-        <main className="app-main">
-          {activeTab === 'clients' && <GestionClientes />}
-          {activeTab === 'services' && <ServicesModule />}
-          {activeTab === 'reservations' && (
-            <>
-              <FormularioReserva />
-              <ListaReservas />
-            </>
-          )}
-        </main>
-
-        <Footer />
+        <div className="app-content-wrapper">
+          <main className="app-main">
+            {activeTab === 'clients' && <GestionClientes />}
+            {activeTab === 'services' && <ServicesModule />}
+            {activeTab === 'reservations' && (
+              <>
+                <FormularioReserva />
+                <ListaReservas />
+              </>
+            )}
+          </main>
+          <Footer />
+        </div>
       </div>
     </ReservasProvider>
   )
