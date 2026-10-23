@@ -1,12 +1,12 @@
 import { useState } from 'react'
-import { ReservasProvider } from './context/ReservasContext'
+import { ReservasProvider } from './features/reservations/ReservasContext'
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
-import GestionClientes from './Gestion-Clientes/GestionClientes'
-import ServicesModule from './components/services/ServicesModule'
-import FormularioReserva from './components/Reservas/FormularioReserva'
-import ListaReservas from './components/Reservas/ListaReservas'
-import './App.css'
+import GestionClientes from './features/clients/GestionClientes'
+import ServicesModule from './features/services/ServicesModule'
+import FormularioReserva from './features/reservations/FormularioReserva'
+import ListaReservas from './features/reservations/ListaReservas'
+import './styles/App.css'
 
 function App() {
   const [activeTab, setActiveTab] = useState('clients')

@@ -1,0 +1,233 @@
+.services-container {
+  width: 100%;
+  max-width: 100%;
+  color: var(--flow-text-main);
+}
+
+/* ENCABEZADO */
+.services-header {
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.services-header h2 {
+  margin: 0 0 6px 0;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--flow-text-main);
+}
+
+.services-header p {
+  margin: 0;
+  color: var(--flow-text-muted);
+  font-size: 15px;
+}
+
+.services-linea-decorativa {
+  width: 40px;
+  height: 3px;
+  margin-top: 16px;
+  background: var(--flow-purple);
+  border-radius: 2px;
+}
+
+/* TARJETAS / PANELES */
+.services-card {
+  width: 100%;
+  padding: 32px;
+  margin-bottom: 24px;
+  background: var(--flow-bg);
+  border: 1px solid var(--flow-border);
+  border-radius: 12px;
+  transition: border-color 0.2s ease;
+}
+
+.services-card:hover {
+  border-color: #d1d5db;
+}
+
+.services-card-titulo {
+  margin-bottom: 24px;
+}
+
+.services-card-titulo h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--flow-text-main);
+}
+
+/* MENSAJES */
+.services-mensaje {
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.services-mensaje.error {
+  color: #991b1b;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+/* FORMULARIO */
+.services-form {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 16px;
+  align-items: end;
+}
+
+@media (max-width: 900px) {
+  .services-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--flow-text-main);
+}
+
+.form-group input {
+  display: block;
+  width: 100%;
+  min-height: 40px;
+  padding: 8px 12px;
+  color: var(--flow-text-main);
+  background: var(--flow-bg);
+  border: 1px solid var(--flow-border);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-group input:focus {
+  border-color: var(--flow-purple);
+  box-shadow: 0 0 0 3px var(--flow-purple-soft);
+}
+
+.form-group input::placeholder {
+  color: #9ca3af;
+}
+
+/* BOTÓN */
+.services-boton-principal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 8px 20px;
+  color: #ffffff;
+  background: var(--flow-purple);
+  border: 1px solid var(--flow-purple);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  height: 40px;
+  margin-bottom: 1px; /* Ajuste para alinear con los inputs */
+}
+
+.services-boton-principal:hover {
+  background: var(--flow-purple-hover);
+  border-color: var(--flow-purple-hover);
+}
+
+/* TABLA */
+.services-tabla-contenedor {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--flow-border);
+  border-radius: 8px;
+}
+
+.services-tabla {
+  width: 100%;
+  min-width: 500px;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 14px;
+}
+
+.services-tabla th {
+  padding: 12px 16px;
+  color: var(--flow-text-muted);
+  background: var(--flow-surface);
+  border-bottom: 1px solid var(--flow-border);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.services-tabla td {
+  padding: 14px 16px;
+  color: var(--flow-text-main);
+  background: var(--flow-bg);
+  border-bottom: 1px solid var(--flow-border);
+}
+
+.services-tabla tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.services-tabla tbody tr:hover td {
+  background: var(--flow-surface);
+}
+
+.service-nombre {
+  font-weight: 600;
+}
+
+.service-precio {
+  color: var(--flow-text-muted);
+  font-weight: 500;
+}
+
+/* BADGE DE DURACIÓN */
+.service-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  background: var(--flow-surface);
+  color: var(--flow-text-main);
+  border: 1px solid var(--flow-border);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ESTADO VACÍO */
+.services-vacio {
+  padding: 48px 16px;
+  text-align: center;
+  background: var(--flow-surface);
+  border: 1px dashed var(--flow-border);
+  border-radius: 8px;
+}
+
+.services-vacio strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 15px;
+  color: var(--flow-text-main);
+}
+
+.services-vacio span {
+  font-size: 14px;
+  color: var(--flow-text-muted);
+}
