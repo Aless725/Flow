@@ -1,16 +1,16 @@
-# React + Vite
+# Módulo de Servicios
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
+Este módulo permite la administración completa del catálogo de servicios dentro de la aplicación web corporativa.
 
-Currently, two official plugins are available:
+## Funcionalidades Implementadas
+1. **Registro de Servicios:** Permite dar de alta nuevos servicios especificando nombre, precio y duración.
+2. **Consulta de Catálogo:** Visualización estructurada en tabla de todos los servicios disponibles.
+3. **Validaciones de Negocio:** 
+   - Campos obligatorios completos.
+   - Restricción de precios y duraciones mayores estricts a 0 min.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Componentes Principales
+- `ServicesModule.jsx`: Contenedor principal de estados.
+- `ServiceForm.jsx`: Formulario con lógica de validación de datos.
+- `ServiceList.jsx`: Tabla interactiva para la consulta de registros.
