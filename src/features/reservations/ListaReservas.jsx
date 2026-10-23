@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useReservas } from '../../context/ReservasContext'
+import { useReservas } from './ReservasContext'
 import './Reservas.css'
 
 export default function ListaReservas() {
