@@ -1,12 +1,11 @@
-* {
-  box-sizing: border-box;
-}
+:root {
+  --flow-font: 'Titillium Web', system-ui, sans-serif;
 
-body {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  min-height: 100vh;
-  background-color: #f3f4f6;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --flow-bg: #ffffff;          /* blanco */
+  --flow-purple: #6b21a8;      /* morado principal — ajustable a tu morado exacto */
+  --flow-dark: #1f2937;        /* gris oscuro principal */
+
+  --flow-text: var(--flow-dark);
+  --flow-text-muted: #4b5563;  /* gris medio para textos secundarios */
+  --flow-border: #e5e7eb;      /* gris claro para bordes */
 }
