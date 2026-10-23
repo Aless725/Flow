@@ -1,3 +1,29 @@
+## Módulo de Gestión de Clientes
+
+### Descripción
+
+Este módulo nos permite administrar la información de los clientes dentro de la aplicación web, facilitando su registro, consulta, edición y búsqueda.
+
+### Funcionalidades Implementadas
+
+1. **Registro de Clientes:** Permite registrar nuevos clientes ingresando sus datos personales y de contacto.
+2. **Consulta de Clientes:** Visualización de los clientes registrados en la aplicación.
+3. **Edición de Clientes:** Permite modificar y actualizar la información de los clientes existentes.
+4. **Búsqueda de Clientes:** Facilita la localización de clientes mediante consultas en los registros disponibles.
+5. **Validaciones de Datos:**
+   - Verificación de campos obligatorios.
+   - Validación del nombre y número de teléfono.
+   - Validación del formato del correo electrónico.
+   - Restricción de correos electrónicos duplicados.
+
+### Componentes Principales
+
+- `GestionClientes.jsx`: Componente principal que administra el registro, consulta, búsqueda, edición y validación de los datos de clientes.
+- `GestionClientes.css`: Archivo que contiene los estilos visuales del módulo de gestión de clientes.
+
+
+
+
 # Módulo de Servicios
 
 ## Descripción
