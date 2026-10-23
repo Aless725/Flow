@@ -1,0 +1,81 @@
+.flow-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background-color: var(--flow-bg);
+  border-bottom: 1px solid var(--flow-gray-light);
+}
+
+.flow-header-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.flow-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.flow-brand-text h1 {
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.flow-brand-text span {
+  font-size: 13px;
+  color: var(--flow-gray);
+  font-weight: 600;
+}
+
+.flow-nav {
+  display: flex;
+  gap: 8px;
+  background: #f9fafb;
+  padding: 6px;
+  border-radius: 12px;
+  border: 1px solid var(--flow-gray-light);
+}
+
+.flow-nav-btn {
+  padding: 10px 20px;
+  border: none;
+  background: transparent;
+  color: var(--flow-gray);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.flow-nav-btn:hover {
+  color: var(--flow-purple);
+}
+
+.flow-nav-btn.active {
+  background-color: var(--flow-purple);
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .flow-header {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+  }
+  .flow-nav {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .flow-nav-btn {
+    flex: 1;
+    text-align: center;
+  }
+}
