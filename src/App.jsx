@@ -1,21 +1,23 @@
 import { ReservasProvider } from './context/ReservasContext';
 import FormularioReserva from './components/Reservas/FormularioReserva';
 import ListaReservas from './components/Reservas/ListaReservas';
+
 // (Aquí podrían estar los imports de tu compañero)
 
-function App() {
-  return (
-    // (Pon el Provider de tu compañero si lo tiene, o deja el tuyo)
-    <ReservasProvider>
-      <div className="contenedor-principal">
-        <h1 className="titulo-principal">Sistema de Gestión</h1>
-        {/* Componentes de tu compañero si los hay */}
-        
-        <FormularioReserva />
-        <ListaReservas />
-      </div>
-    </ReservasProvider>
-  );
+// function App() {
+//   return (
+//     // (Pon el Provider de tu compañero si lo tiene, o deja el tuyo)
+//     <ReservasProvider>
+//       <div className="contenedor-principal">
+//         <h1 className="titulo-principal">Sistema de Gestión</h1>
+//         {/* Componentes de tu compañervo si los hay */}
+
+//         <FormularioReserva />
+//         <ListaReservas />
+//       </div>
+//     </ReservasProvider>
+//   );
+// }
 
 import { useState } from 'react'
 import GestionClientes from './Gestion-Clientes/GestionClientes'
@@ -66,13 +68,12 @@ function App() {
         {activeTab === 'services' && <ServicesModule />}
 
         {activeTab === 'reservations' && (
-          <div className="placeholder-module">
-            <h2>Módulo de Reservas</h2>
-            <p>
-              Este espacio está reservado para gestionar las citas
-              utilizando el catálogo de servicios guardado.
-            </p>
-          </div>
+          <ReservasProvider>
+            <div className="contenedor-principal">
+              <FormularioReserva />
+              <ListaReservas />
+            </div>
+          </ReservasProvider>
         )}
       </main>
 

@@ -115,8 +115,8 @@ tr:hover {
 .estado-cancelada {
   color: #dc3545;
   font-weight: bold;
-
-.app-container {
+}
+/* .app-container {} */
 
 :root {
   font-family: Inter, "Segoe UI", Arial, sans-serif;
