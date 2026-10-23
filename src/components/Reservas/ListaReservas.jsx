@@ -1,54 +1,68 @@
-import { useReservas } from '../../context/ReservasContext';
+import { useState } from 'react'
+import { useReservas } from '../../context/ReservasContext'
+import './Reservas.css'
 
-const ListaReservas = () => {
-  const { reservas, cancelarReserva } = useReservas();
+export default function ListaReservas() {
+  const { reservas, cancelarReserva } = useReservas()
 
-  if (reservas.length === 0) {
-    return <p style={{ textAlign: 'center', color: '#666' }}>No hay reservas registradas todavía.</p>;
-  }
+  // Leemos los datos para traducir los IDs a nombres
+  const [clientes] = useState(() => JSON.parse(localStorage.getItem('flow_clientes')) || [])
+  const [servicios] = useState(() => JSON.parse(localStorage.getItem('flow_services')) || [])
+
+  const getNombreCliente = (id) => clientes.find(c => c.id === id)?.nombre || 'Cliente no encontrado'
+  const getNombreServicio = (id) => servicios.find(s => s.id === id)?.name || 'Servicio no encontrado'
 
   return (
-    <div className="tabla-container">
-      <h3>Listado de Reservas</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Cliente</th>
-            <th>Servicio</th>
-            <th>Fecha/Hora</th>
-            <th>Estado</th>
-            <th>Acción</th>
-          </tr>
-        </thead>
-        <tbody>
-          {reservas.map((reserva) => (
-            <tr key={reserva.id}>
-              <td>{reserva.id}</td>
-              <td>{reserva.cliente_id}</td>
-              <td>{reserva.servicio_id}</td>
-              <td>{new Date(reserva.fecha_hora).toLocaleString()}</td>
-              <td>
-                <span className={reserva.estado === 'confirmada' ? 'estado-confirmada' : 'estado-cancelada'}>
-                  {reserva.estado.toUpperCase()}
-                </span>
-              </td>
-              <td>
-                {reserva.estado === 'confirmada' && (
-                  <button
-                    className="btn-cancelar"
-                    onClick={() => cancelarReserva(reserva.id)}
-                  >
-                    Cancelar
-                  </button>
-                )}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
-};
+    <section className="reservas-card">
+      <div className="reservas-card-titulo">
+        <h3>Historial de Reservas</h3>
+        <p>Consulta y gestiona el estado de las citas agendadas.</p>
+      </div>
 
-export default ListaReservas;
+      {reservas.length === 0 ? (
+        <div className="reservas-vacio">
+          <strong>No hay reservas registradas</strong>
+          <span>Las citas que agendes aparecerán en esta lista.</span>
+        </div>
+      ) : (
+        <div className="reservas-tabla-contenedor">
+          <table className="reservas-tabla">
+            <thead>
+              <tr>
+                <th>Cliente</th>
+                <th>Servicio</th>
+                <th>Fecha y Hora</th>
+                <th>Estado</th>
+                <th>Acción</th>
+              </tr>
+            </thead>
+            <tbody>
+              {reservas.map((reserva) => (
+                <tr key={reserva.id}>
+                  <td className="reserva-nombre">{getNombreCliente(reserva.cliente_id)}</td>
+                  <td>{getNombreServicio(reserva.servicio_id)}</td>
+                  <td>{new Date(reserva.fecha_hora).toLocaleString('es-PE', { dateStyle: 'medium', timeStyle: 'short' })}</td>
+                  <td>
+                    <span className={`reserva-badge ${reserva.estado}`}>
+                      {reserva.estado}
+                    </span>
+                  </td>
+                  <td>
+                    {reserva.estado === 'confirmada' && (
+                      <button
+                        className="reservas-boton-cancelar"
+                        onClick={() => cancelarReserva(reserva.id)}
+                      >
+                        Cancelar
+                      </button>
+                    )}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+    </section>
+  )
+}
