@@ -84,7 +84,7 @@
   display: block;
   width: 100%;
   min-height: 40px;
-  padding: 8px 12px;
+  padding: 8px 12px 8px 35px;
   color: var(--flow-text-main);
   background: var(--flow-bg);
   border: 1px solid var(--flow-border);
@@ -93,6 +93,19 @@
   font-size: 14px;
   outline: none;
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.gc-busqueda-contenedor {
+  position: relative;
+}
+
+.gc-busqueda-contenedor span {
+  position: absolute;
+  left: 12px;
+  top: 46%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  pointer-events: none;
 }
 
 .gc-formulario input:focus,
