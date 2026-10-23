@@ -18,14 +18,12 @@ function Header({ activeTab, setActiveTab }) {
         >
           Clientes
         </button>
-
         <button
           className={`flow-nav-btn ${activeTab === 'services' ? 'active' : ''}`}
           onClick={() => setActiveTab('services')}
         >
           Servicios
         </button>
-
         <button
           className={`flow-nav-btn ${activeTab === 'reservations' ? 'active' : ''}`}
           onClick={() => setActiveTab('reservations')}
