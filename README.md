@@ -1,16 +1,42 @@
-# React + Vite
+## Módulo de Gestión de Clientes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Descripción
 
-Currently, two official plugins are available:
+Este módulo nos permite administrar la información de los clientes dentro de la aplicación web, facilitando su registro, consulta, edición y búsqueda.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Funcionalidades Implementadas
 
-## React Compiler
+1. **Registro de Clientes:** Permite registrar nuevos clientes ingresando sus datos personales y de contacto.
+2. **Consulta de Clientes:** Visualización de los clientes registrados en la aplicación.
+3. **Edición de Clientes:** Permite modificar y actualizar la información de los clientes existentes.
+4. **Búsqueda de Clientes:** Facilita la localización de clientes mediante consultas en los registros disponibles.
+5. **Validaciones de Datos:**
+   - Verificación de campos obligatorios.
+   - Validación del nombre y número de teléfono.
+   - Validación del formato del correo electrónico.
+   - Restricción de correos electrónicos duplicados.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Componentes Principales
 
-## Expanding the ESLint configuration
+- `GestionClientes.jsx`: Componente principal que administra el registro, consulta, búsqueda, edición y validación de los datos de clientes.
+- `GestionClientes.css`: Archivo que contiene los estilos visuales del módulo de gestión de clientes.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+
+# Módulo de Servicios
+
+## Descripción
+Este módulo permite la administración completa del catálogo de servicios dentro de la aplicación web corporativa.
+
+## Funcionalidades Implementadas
+1. **Registro de Servicios:** Permite dar de alta nuevos servicios especificando nombre, precio y duración.
+2. **Consulta de Catálogo:** Visualización estructurada en tabla de todos los servicios disponibles.
+3. **Validaciones de Negocio:** 
+   - Campos obligatorios completos.
+   - Restricción de precios y duraciones mayores estricts a 0 min.
+
+## Componentes Principales
+- `ServicesModule.jsx`: Contenedor principal de estados.
+- `ServiceForm.jsx`: Formulario con lógica de validación de datos.
+- `ServiceList.jsx`: Tabla interactiva para la consulta de registros.
