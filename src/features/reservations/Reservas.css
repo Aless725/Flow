@@ -261,3 +261,23 @@
     grid-column: auto;
   }
 }
+
+.services-linea-decorativa {
+  width: 40px;
+  height: 3px;
+  margin-top: 16px;
+  background: var(--flow-purple);
+  border-radius: 2px;
+}
+
+.page-header {
+  margin-bottom: 32px;
+}
+
+.page-divider {
+  width: 50px;
+  height: 4px;
+  margin-top: 20px;
+  border-radius: 999px;
+  background: var(--flow-purple);
+}

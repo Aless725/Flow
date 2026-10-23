@@ -27,8 +27,8 @@ export default function ServicesModule() {
   return (
     <div className="services-container">
       <header className="services-header">
-        <h2>Módulo de Servicios</h2>
-        <p>Gestión de precios, tiempos y catálogo general de servicios.</p>
+        <h2>Gestión de Servicios</h2>
+        <p>Registra los precios, tiempos y catálogo general de servicios.</p>
         <div className="services-linea-decorativa" />
       </header>
 

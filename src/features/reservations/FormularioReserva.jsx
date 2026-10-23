@@ -42,10 +42,20 @@ export default function FormularioReserva() {
   const sinDatos = clientes.length === 0 || servicios.length === 0
 
   return (
+  <div>
+    <div className="page-header">
+      <h1>Gestión de reservas</h1>
+      <p>
+        Administra las citas registradas y realiza el seguimiento de las reservas.
+      </p>
+      <div className="page-divider"></div>
+    </div>
+
     <section className="reservas-card">
       <div className="reservas-card-titulo">
         <h2>Registrar Nueva Reserva</h2>
         <p>Selecciona un cliente, un servicio y la fecha de la cita.</p>
+        <div className="services-linea-decorativa" />
       </div>
 
       {sinDatos && (
@@ -99,5 +109,6 @@ export default function FormularioReserva() {
         </div>
       </form>
     </section>
+  </div>
   )
 }
