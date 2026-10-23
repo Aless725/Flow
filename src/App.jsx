@@ -14,42 +14,10 @@ function App() {
   return (
     <ReservasProvider >
       <div className="app-container">
-        <header className="app-header">
-          <Header
-            activeTab={activeTab}
-            setActiveTab={setActiveTab}
-          />
-          <div className="header-brand">
-            <div className="app-title">
-              <img className="title-img" src="/flow.png" alt="Flow" />
-              <h1 className="title-name">Flow</h1>
-            </div>
-            <span>Panel Principal</span>
-          </div>
-
-          <nav className="header-nav" aria-label="Navegación principal">
-            <button
-              className={`nav-btn ${activeTab === 'clients' ? 'active' : ''}`}
-              onClick={() => setActiveTab('clients')}
-            >
-              Clientes
-            </button>
-
-            <button
-              className={`nav-btn ${activeTab === 'services' ? 'active' : ''}`}
-              onClick={() => setActiveTab('services')}
-            >
-              Servicios
-            </button>
-
-            <button
-              className={`nav-btn ${activeTab === 'reservations' ? 'active' : ''}`}
-              onClick={() => setActiveTab('reservations')}
-            >
-              Reservas
-            </button>
-          </nav>
-        </header>
+        <Header
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
+        />
 
         <main className="app-main">
           {activeTab === 'clients' && <GestionClientes />}
