@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap');
+
+:root {
+  /* Paleta Flow — Estilo Superhuman / Notion */
+  --flow-bg: #ffffff;
+  --flow-surface: #f9f9f8;       /* Fondo sutil para tarjetas / inputs */
+  --flow-border: #e5e5e5;       /* Bordes ultra finos, casi invisibles */
+  --flow-text-main: #191919;    /* Casi negro, para lectura cómoda */
+  --flow-text-muted: #6b7280;   /* Gris medio para textos secundarios */
+  --flow-purple: #7c3aed;       /* Morado principal */
+  --flow-purple-hover: #6d28d9;
+  --flow-purple-soft: #f3e8ff;  /* Fondo morado muy suave para estados activos */
+  
+  --flow-font: 'Titillium Web', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--flow-bg);
+  color: var(--flow-text-main);
+  font-family: var(--flow-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  color: var(--flow-text-main);
+  font-weight: 700;
+}
+
+p {
+  margin: 0;
+  color: var(--flow-text-muted);
+  line-height: 1.6;
+}
+
+button {
+  font-family: inherit;
+}
