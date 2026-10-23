@@ -4,8 +4,9 @@ import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
 import GestionClientes from './features/clients/GestionClientes'
 import ServicesModule from './features/services/ServicesModule'
-import FormularioReserva from './features/reservations/FormularioReserva'
-import ListaReservas from './features/reservations/ListaReservas'
+import FormularioReserva from './components/Reservas/FormularioReserva'
+import ListaReservas from './components/Reservas/ListaReservas'
+import './context/ReservasContext'
 import './styles/App.css'
 
 function App() {
