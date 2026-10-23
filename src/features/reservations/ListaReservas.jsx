@@ -5,7 +5,6 @@ import './Reservas.css'
 export default function ListaReservas() {
   const { reservas, cancelarReserva } = useReservas()
 
-  // Leemos los datos para traducir los IDs a nombres
   const [clientes] = useState(() => JSON.parse(localStorage.getItem('flow_clientes')) || [])
   const [servicios] = useState(() => JSON.parse(localStorage.getItem('flow_services')) || [])
 
@@ -15,7 +14,7 @@ export default function ListaReservas() {
   return (
     <section className="reservas-card">
       <div className="reservas-card-titulo">
-        <h3>Historial de Reservas</h3>
+        <h2>Historial de Reservas</h2>
         <p>Consulta y gestiona el estado de las citas agendadas.</p>
       </div>
 

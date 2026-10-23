@@ -5,7 +5,6 @@ import './Reservas.css'
 export default function FormularioReserva() {
   const { agregarReserva } = useReservas()
   
-  // Leemos los datos para los selectores
   const [clientes] = useState(() => JSON.parse(localStorage.getItem('flow_clientes')) || [])
   const [servicios] = useState(() => JSON.parse(localStorage.getItem('flow_services')) || [])
   
@@ -18,7 +17,7 @@ export default function FormularioReserva() {
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
-    setMensaje({ texto: '', tipo: '' }) // Limpiar mensaje al escribir
+    setMensaje({ texto: '', tipo: '' })
   }
 
   const handleSubmit = (e) => {
@@ -45,7 +44,7 @@ export default function FormularioReserva() {
   return (
     <section className="reservas-card">
       <div className="reservas-card-titulo">
-        <h3>Registrar Nueva Reserva</h3>
+        <h2>Registrar Nueva Reserva</h2>
         <p>Selecciona un cliente, un servicio y la fecha de la cita.</p>
       </div>
 
@@ -61,7 +60,7 @@ export default function FormularioReserva() {
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="reservas-form">
+      <form onSubmit={handleSubmit} className="reservas-form" noValidate>
         <div className="form-group">
           <label>Cliente</label>
           <select name="cliente_id" value={formData.cliente_id} onChange={handleChange} disabled={clientes.length === 0}>
@@ -82,7 +81,7 @@ export default function FormularioReserva() {
           </select>
         </div>
 
-        <div className="form-group">
+        <div className="form-group reservas-campo-completo">
           <label>Fecha y Hora</label>
           <input
             type="datetime-local"
@@ -93,7 +92,7 @@ export default function FormularioReserva() {
           />
         </div>
 
-        <div className="form-action">
+        <div className="reservas-acciones">
           <button type="submit" className="reservas-boton-principal" disabled={sinDatos}>
             Guardar Reserva
           </button>
